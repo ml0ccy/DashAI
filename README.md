@@ -2,35 +2,6 @@
 
 A reinforcement learning-based bot (**PPO**, `Stable-Baselines3`) for automatic gameplay in Geometry Dash via screen capture and key press emulation.
 
-## 📂 Project Structure
-
-project_root/
-│
-├── run.py # Unified CLI entry: train / resume / play
-├── requirements.txt # Python dependencies
-│
-├── configs/
-│ ├── init.py
-│ └── capture_config.py # Dataclass with screen capture configuration
-│
-├── envs/
-│ ├── init.py
-│ ├── gd_env_soft.py # Fixed environment variant (recommended)
-│ └── gd_env_strict.py # Original variant (with bug and logs)
-│
-├── training/
-│ ├── init.py
-│ ├── callbacks.py # AutoSaveCallback
-│ ├── window.py # Geometry Dash window focusing function
-│ ├── train.py # Train model from scratch
-│ ├── resume.py # Continue training from a checkpoint
-│ └── play.py # Run the game with the model (inference)
-│
-├── templates/
-│ └── attempt.png # Template for death detection ("ATTEMPT")
-│
-└── models/ # Folder for saved models (.zip)
-
 ---
 
 ## ⚡ Installation

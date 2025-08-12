@@ -2,35 +2,6 @@
 
 Бот на основе обучения с подкреплением (**PPO**, `Stable-Baselines3`) для автоматической игры в Geometry Dash через захват экрана и эмуляцию нажатий клавиш.
 
-## 📂 Структура проекта
-
-project_root/
-│
-├── run.py # Единый CLI-запуск: train / resume / play
-├── requirements.txt # Зависимости Python
-│
-├── configs/
-│ ├── init.py
-│ └── capture_config.py # Dataclass с конфигурацией захвата экрана
-│
-├── envs/
-│ ├── init.py
-│ ├── gd_env_soft.py # Исправленный вариант окружения (рекомендуется)
-│ └── gd_env_strict.py # Оригинальный вариант (с багом и логами)
-│
-├── training/
-│ ├── init.py
-│ ├── callbacks.py # AutoSaveCallback
-│ ├── window.py # Функция фокусировки окна Geometry Dash
-│ ├── train.py # Тренировка модели с нуля
-│ ├── resume.py # Дообучение модели с чекпоинта
-│ └── play.py # Запуск игры с моделью (инференс)
-│
-├── templates/
-│ └── attempt.png # Шаблон для детекции смерти ("ATTEMPT")
-│
-└── models/ # Папка для сохранённых моделей (.zip)
-
 ---
 
 ## ⚡ Установка
